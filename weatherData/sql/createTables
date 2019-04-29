@@ -1,0 +1,7 @@
+CREATE TABLE APP.Weather (
+    Id int,
+    City varchar(255),
+    Country varchar(255),
+    Temperature REAL,
+    Timestamp TIMESTAMP 
+);
