@@ -48,7 +48,8 @@ public class Board extends JPanel implements ActionListener {
     public Snake snake;
     public Snake snake2;
     
-    public boolean multiplayerMode = true;
+    public boolean multiplayerMode = false;
+//    public boolean multiplayerMode = true;
     
     public Board() {
     	
@@ -302,7 +303,9 @@ public class Board extends JPanel implements ActionListener {
 //	            	snake2.move();
 	            	}
 	        }
-	        snake2.move();
+	        if (multiplayerMode) {
+	        	snake2.move();
+	        }
             snake.move();
             checkCollision();	        
         }
